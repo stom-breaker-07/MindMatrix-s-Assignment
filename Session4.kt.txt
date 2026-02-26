@@ -1,0 +1,50 @@
+fun main() {
+    BusinessCard(
+        name = "Chinmay Ranganath",
+        title = "Java Backend Developer",
+        phone = "+91 9876543210",
+        email = "chinmay@email.com",
+        github = "github.com/chinmay-dev"
+    )
+}
+
+fun BusinessCard(
+    name: String,
+    title: String,
+    phone: String,
+    email: String,
+    github: String
+) {
+    printDivider()
+    LogoSection()
+    HeaderSection(name, title)
+    ContactSection(phone, email, github)
+    printDivider()
+}
+
+fun LogoSection() {
+    println("        ◼◼◼◼◼◼◼")
+    println("        ◼  KB  ◼")
+    println("        ◼◼◼◼◼◼◼")
+    println()
+}
+
+fun HeaderSection(name: String, title: String) {
+    println("        $name")
+    println("        $title")
+    println()
+}
+
+fun ContactSection(phone: String, email: String, github: String) {
+    ContactItem("📞", phone)
+    ContactItem("✉️", email)
+    ContactItem("🌐", github)
+}
+
+fun ContactItem(icon: String, value: String) {
+    println("   $icon  $value")
+}
+
+fun printDivider() {
+    println("=======================================")
+}
